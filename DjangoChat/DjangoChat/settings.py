@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #on the top register your application
+    'ChitChat.apps.ChitchatConfig',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -128,3 +130,12 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 ASGI_APPLICATION = 'DjangoChat.asgi.application'
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
+
+LOGIN_REDIRECT_URL = "chat-page"
+LOGOUT_REDIRECT_URL = "login-user"
