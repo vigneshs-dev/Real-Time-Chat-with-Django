@@ -1,5 +1,5 @@
 # Real Time Chat with Django
-Desktop Cleaner is used to clean and organise your files in separate folders based on the created/downloaded dates.
+Real Time Chat App is made using Django to communicate with members in Real Time.
 
 ## Prerequisits
 
@@ -26,7 +26,8 @@ pip install -r requirements.txt
 ```
 6. Run the project 
 ```bash
-python manage.py
+cd DjangoChat
+python manage.py runserver
 ```
 
 ## Contributing
@@ -36,4 +37,4 @@ to discuss what you would like to change.
 
 ## License
 
-[MIT](https://github.com/VigneshVicky97/Desktop_Cleaner?tab=MIT-1-ov-file)
+[MIT](https://github.com/VigneshVicky97/Real-Time-Chat-with-Django/blob/main/LICENSE)
