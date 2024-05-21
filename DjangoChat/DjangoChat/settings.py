@@ -36,7 +36,12 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    # Daphne must be listed before django.contrib.staticfiles
+    'daphne',
     "django.contrib.staticfiles",
+    # Adding the newly installed dependencies
+    # Adding channels at END, so that it doesn't interfere with other apps
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +126,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+ASGI_APPLICATION = 'DjangoChat.asgi.application'
